@@ -26,7 +26,7 @@ function main() {
 		    pos:  [6.0, -9.0, 8.0],
 		    ambi: [0.4, 0.4, 0.4],
 		    spec: [1.0, 1.0, 1.0],
- diff: [1.0, 1.0, 1.0],
+                    diff: [1.0, 1.0, 1.0],
 		},
 	    }},
 	models: {
@@ -86,14 +86,9 @@ function update_plane(options){
 }
 
 function main_loop(){
- //   animate(scene);
     draw(scene);
     requestAnimationFrame(main_loop);
     scene.render();
-}
-
-function animate(scene){
-    let dT = scene.time.dT; 
 }
 
 function draw(scene) {

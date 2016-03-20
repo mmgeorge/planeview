@@ -49,7 +49,6 @@
     }
   </style >
   <script src="./dist/built.js"></script>
-  <script src="//localhost:35729/livereload.js"></script>
   <div class = "container">
     <body onload="main()" onresize= "winResize()"> 
       <canvas id="webgl" width="800" height="600" >
@@ -73,5 +72,7 @@
       <input type="range" min="0" max="50" value="10"
 	     oninput="update_plane({height:this.value})"
 	     onchange="update_plane({height:this.value})"/>
+      <hr>
+      <a href= "https://github.com/mmgeorge/planeview/tree/gh-pages/src">View source</a>
     </div>
 </html>
