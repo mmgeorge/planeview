@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project C)</title>
+  </head>
+  <style>
+    *{margin:0;padding0;}
+
+    html, body {
+    overflow:hidden
+    }
+
+    canvas {
+    display:block; 
+    }
+
+    .container{
+    position: relative; 
+    }
+
+    h1{
+    font-size: 18px;
+    }
+
+    hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 0.5px;
+    }
+
+    div {
+    display: inline-block;
+    }
+    #overlay {
+    position: absolute;
+    top: calc( 50% - 100px);
+    left: calc( 104% - 200px);
+    background-color: rgba(0,0,0,0.7);
+    color : white;
+    font-family : monospace;
+    padding: 1em;
+    border-radius 1em; 
+    border: 1px solid #ccc;
+    }
+  </style >
+  <script src="./dist/built.js"></script>
+  <script src="//localhost:35729/livereload.js"></script>
+  <div class = "container">
+    <body onload="main()" onresize= "winResize()"> 
+      <canvas id="webgl" width="800" height="600" >
+	Please use a browser that supports "canvas"
+      </canvas>
+    </body>
+    <div id= "overlay">
+      <h1>planeview</h1>
+      <hr>
+      Movement: WASD/QE
+      <hr>
+      <div>Displacement:
+	<span id="time"></span>
+	<span id="displacement">10</span></div>
+      <input type="range" min="0" max="50" value="10"
+	     oninput="update_plane({displacement:this.value})"
+	     onchange="update_plane({displacement:this.value})"/>
+      <div>Height:
+	<span id="time"></span>
+	<span id="height">10</span></div>
+      <input type="range" min="0" max="50" value="10"
+	     oninput="update_plane({height:this.value})"
+	     onchange="update_plane({height:this.value})"/>
+    </div>
+</html>
